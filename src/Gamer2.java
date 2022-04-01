@@ -7,6 +7,7 @@ public static void main(String[] args) throws NumberFormatException, IOException
 		
 	
 	//Este es el código final que se hizo en el ejercio Gamer Hemose.
+	
 		BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
 		
 		int nCases = Integer.parseInt(br.readLine());
@@ -47,10 +48,8 @@ public static void main(String[] args) throws NumberFormatException, IOException
 				
 				
 			}
-			
-			output+= j+"\n";
+			System.out.println(j);
 			counter++;
 		}
-		System.out.println(output);
 	}
 }

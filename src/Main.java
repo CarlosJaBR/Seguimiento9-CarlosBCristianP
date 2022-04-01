@@ -23,7 +23,6 @@ public class Main {
 			for(int i = 0; i<prices.length;i++) {
 				prices[i] = Integer.parseInt(array[i]);
 			}
-			//ordenar(prices);
 			Arrays.sort(prices);
 			
 			int inicio = 0;
@@ -39,6 +38,7 @@ public class Main {
 					fin = medio-1;
 				}
 			}
+			
 			output += "Peter should buy books whose prices are " + valor + " and " + prices[medio] + "\n";
 			output += "\n";
 			
@@ -46,17 +46,5 @@ public class Main {
 		}
 		System.out.println(output);
 	}
-	/*
-	public static void ordenar(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 1; j < array.length-i; j++) {
-				if(array[j]<array[j-1]) {
-					int temp = array[j-1];
-					array[j-1] = array[j];
-					array[j] = temp; 
-				}
-			}
-		}
-	}
-	*/
+	
 }

@@ -11,8 +11,6 @@ public class MedianMaximization {
 		String out = "";
 	
 		
-		
-		
 		for(int i = 0;i<numTest;i++) {
 			String test = br.readLine();
 			String [] separatedTest = test.split(" ");

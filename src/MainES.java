@@ -1,20 +1,22 @@
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
+
 import java.util.Arrays;
 
-public class Main {
+public class MainES {
+	
+	//Se hace la una implementación cruzada de la clase Main, corresponde al ejercicio Exact sum. No nos pasa en el juez.
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		
-		//Ejercicio Exact sum, presentamos errores con el juez por lo que se hace la clase MainES para hacer implementación cruzada y encontrar mejor solución.
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
+		Scanner br = new Scanner(System.in); 
 		String inputs = "0"; 
 		
-		while(inputs!=null) {
-			int numBooks = Integer.parseInt(br.readLine());
-			String priceBooks = br.readLine();
+		while(br.hasNext()) {
+			int numBooks = br.nextInt();
+			br.nextLine();
+			String priceBooks = br.nextLine();
 			String[] array = priceBooks.split(" ");
-			int money = Integer.parseInt(br.readLine());
+			int money = br.nextInt();
 			int[] prices = new int[array.length];
 			for(int i = 0; i<prices.length;i++) {
 				prices[i] = Integer.parseInt(array[i]);
@@ -63,9 +65,9 @@ public class Main {
 				
 			}
 		
-			System.out.println("\nPeter should buy books whose prices are " + finalOut1 + " and " + finalOut2+".\n");
-			
-			inputs = br.readLine();
+			System.out.println("Peter should buy books whose prices are " + finalOut1 + " and " + finalOut2+".");
+			System.out.println("");
+			//inputs = br.nextLine();
 			
 		}
 	}
